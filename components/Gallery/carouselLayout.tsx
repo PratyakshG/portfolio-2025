@@ -1,6 +1,17 @@
 import React from "react";
 
-const HorizontalScrollCarousel = ({ card }) => {
+interface Card {
+  url: string;
+  title?: string;
+}
+
+interface HorizontalScrollCarouselProps {
+  card: Card;
+}
+
+const HorizontalScrollCarousel: React.FC<HorizontalScrollCarouselProps> = ({
+  card,
+}) => {
   return (
     <div className="group relative size-[150px] md:size-[250px] lg:size-[350px] xl:size-[450px] overflow-hidden bg-neutral-200 hover:scale-110 transition-all duration-300 opacity-60 hover:opacity-100">
       <div

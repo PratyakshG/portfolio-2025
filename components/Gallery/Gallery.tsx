@@ -65,8 +65,8 @@ const Gallery = () => {
               {carouselImages.map((card) => {
                 return (
                   <HorizontalScrollCarousel
-                    card={card}
                     key={card.id}
+                    card={card}
                   />
                 );
               })}
