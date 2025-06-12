@@ -1,10 +1,4 @@
-import {
-  useMotionValue,
-  motion,
-  useSpring,
-  useTransform,
-  cubicBezier,
-} from "motion/react";
+import { useMotionValue, motion, useSpring, useTransform } from "motion/react";
 import React, { useRef } from "react";
 import { FiArrowRight } from "react-icons/fi";
 import Image, { StaticImageData } from "next/image";
