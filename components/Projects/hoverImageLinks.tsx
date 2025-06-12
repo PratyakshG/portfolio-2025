@@ -1,7 +1,14 @@
-import { useMotionValue, motion, useSpring, useTransform } from "motion/react";
+import {
+  useMotionValue,
+  motion,
+  useSpring,
+  useTransform,
+  cubicBezier,
+} from "motion/react";
 import React, { useRef } from "react";
 import { FiArrowRight } from "react-icons/fi";
 import Image, { StaticImageData } from "next/image";
+import { useTransitionRouter } from "next-view-transitions";
 
 interface LinkProps {
   index: string;
@@ -18,6 +25,8 @@ export const HoverImageLinks = ({
   subheading,
   href,
 }: LinkProps) => {
+  const router = useTransitionRouter();
+
   const ref = useRef<HTMLAnchorElement | null>(null);
 
   const x = useMotionValue(0);
@@ -47,11 +56,55 @@ export const HoverImageLinks = ({
     y.set(yPct);
   };
 
+  const slideInOut = () => {
+    document.documentElement.animate(
+      [
+        {
+          opacity: 1,
+          transform: "translateY(0)",
+        },
+        {
+          opacity: 0.2,
+          transform: "translateY(-35%)",
+        },
+      ],
+      {
+        duration: 1500,
+        easing: "cubic-bezier(0.87, 0, 0.13, 1)",
+        fill: "forwards",
+        pseudoElement: "::view-transition-old(root)",
+      },
+    );
+
+    document.documentElement.animate(
+      [
+        {
+          clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+        },
+        {
+          clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+        },
+      ],
+      {
+        duration: 1500,
+        easing: "cubic-bezier(0.87, 0, 0.13, 1)",
+        fill: "forwards",
+        pseudoElement: "::view-transition-new(root)",
+      },
+    );
+  };
+
   return (
     <>
       <motion.a
         href={href}
         ref={ref}
+        onClick={(e) => {
+          e.preventDefault();
+          router.push(href, {
+            onTransitionReady: slideInOut,
+          });
+        }}
         onMouseMove={handleMouseMove}
         initial="initial"
         whileHover="whileHover"

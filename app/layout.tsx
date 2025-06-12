@@ -7,6 +7,8 @@ import {
 } from "next/font/google";
 import React from "react";
 import "./globals.css";
+import { ReactLenis } from "lenis/react";
+import { ViewTransitions } from "next-view-transitions";
 
 const delaGothicOne = Dela_Gothic_One({
   subsets: ["latin"],
@@ -49,12 +51,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body
-        className={`${poppins.variable} ${delaGothicOne.variable} ${anton.variable} ${bebasNeue.variable} ${spaceMono.variable} antialiased overflow-x-hidden`}
-      >
-        {children}
-      </body>
-    </html>
+    <ViewTransitions>
+      <html lang="en">
+        <ReactLenis root>
+          <body
+            className={`${poppins.variable} ${delaGothicOne.variable} ${anton.variable} ${bebasNeue.variable} ${spaceMono.variable} antialiased overflow-x-hidden`}
+          >
+            {children}
+          </body>
+        </ReactLenis>
+      </html>
+    </ViewTransitions>
   );
 }

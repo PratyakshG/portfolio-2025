@@ -1,10 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import Lenis from "lenis";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
 import { FaArrowLeft } from "react-icons/fa6";
 import { IoIosMail } from "react-icons/io";
 
