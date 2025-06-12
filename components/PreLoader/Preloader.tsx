@@ -34,26 +34,42 @@ const dots = {
       duration: 1,
       ease: "easeInOut",
       repeat: Infinity,
-      repeatType: "mirror",
+      // repeatType: mirror,
       repeatDelay: 1,
     },
   },
 };
 
-const Preloader = ({ setIsLoading }: { setIsLoading: boolean }) => {
+const Preloader = ({
+  setIsLoading,
+}: {
+  setIsLoading: (arg: boolean) => void;
+}) => {
   const ref = useRef<HTMLSpanElement>(null);
   const [counter, setCounter] = useState(0);
 
   useEffect(() => {
-    counter !== 100 &&
+    if (counter !== 100) {
       setTimeout(() => {
         setCounter((prev) => prev + 1);
       }, 30);
+    }
 
-    counter === 100 &&
+    if (counter === 100) {
       setTimeout(() => {
         setIsLoading(false);
-      }, 2000);
+      }, 20);
+    }
+
+    // counter !== 100 &&
+    //   setTimeout(() => {
+    //     setCounter((prev) => prev + 1);
+    //   }, 30);
+
+    // counter === 100 &&
+    //   setTimeout(() => {
+    //     setIsLoading(false);
+    //   }, 2000);
   }, [counter, setIsLoading]);
 
   return (

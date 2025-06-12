@@ -1,12 +1,12 @@
 import { motion } from "motion/react";
-import React, { ReactNode } from "react";
+import React from "react";
 
 const blockVariants = {
   initial: {
     top: 0,
     when: "beforeChildren",
   },
-  animate: (i) => ({
+  animate: (i: number) => ({
     top: "100vh",
     transition: {
       duration: 0.5,
@@ -16,7 +16,7 @@ const blockVariants = {
     when: "beforeChildren",
     transitionEnd: { height: "0", top: "0" },
   }),
-  exit: (i) => ({
+  exit: (i: number) => ({
     height: "100vh",
     transition: {
       duration: 0.5,

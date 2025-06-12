@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Dispatch, SetStateAction, useState } from "react";
+import { Dispatch, SetStateAction } from "react";
 import { IconType } from "react-icons";
 
 const itemVariants = {

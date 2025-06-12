@@ -18,7 +18,7 @@ const ProjectPageLayout = ({ project }: ProjectPageProps) => {
     desc,
     figLink,
     gitLink,
-    imgSrc,
+    // imgSrc,
     mockup,
     techStack,
     features,
