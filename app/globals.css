@@ -1,26 +1,61 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@layer utilities {
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  .flex-between {
+    @apply flex justify-between items-center;
   }
 }
 
+@theme inline {
+  --font-poppins: var(--font-poppins);
+  --font-anton: var(--font-anton);
+  --font-spaceMono: var(--font-space-mono);
+  --font-delaGothic: var(--font-dela-gothic-one);
+  --color-dark-1: #010305;
+  --color-dark-2: #003049;
+  --color-dark-3: #0a0a0a;
+  --color-gray-1: #8d99ae;
+  --color-gray-2: #84a59d;
+  --color-gray-3: #e0e309;
+  --color-light: #fbfbfb;
+  --color-viridian: #41785a;
+  --color-lightgreen: #80ed99;
+  --color-lightergreen: #c7f9cc;
+  --color-tangerine: #ff934f;
+  --color-raisin: #262730;
+  --color-eerie: #181f1c;
+  --color-platinum: #e2dfdf;
+  --color-blackolive: #203831;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* background-color: #86efac; */
+  /* background: conic-gradient(from 180deg at 21.48% 50.93%, #131E16 0deg, #1F2C27 180deg, #232F28 360deg); */
+  /* font-family: "Afacad", sans-serif; */
+  color: #fff;
+  /* background-color: #e0e3d9; */
+  background-color: #0a0a0a;
+  overflow-x: hidden;
+  /* min-height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }

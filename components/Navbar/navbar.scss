@@ -1,0 +1,52 @@
+@import "../../app/globals.css";
+
+.navbar {
+  z-index: 20;
+
+  .nav_wrapper {
+    .links {
+      @media screen and (min-width: 768px) {
+        a {
+          &::after {
+            display: block;
+            content: "";
+            transform: scaleX(0);
+            border-bottom: 1px solid #fff;
+            transition: transform 250ms ease-in-out;
+            transform-origin: right;
+          }
+
+          &:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+          }
+        }
+      }
+    }
+  }
+}
+
+// @media screen and (min-width: 768px) {
+//   .btn {
+//     &::after {
+//       display: block;
+//       content: "";
+//       transform: scaleX(0);
+//       border-bottom: 1px solid #fff;
+//       transition: transform 250ms ease-in-out;
+//       transform-origin: right;
+//     }
+
+//     &:hover::after {
+//       transform: scaleX(1);
+//       transform-origin: left;
+//     }
+//   }
+// }
+
+// @media screen and (max-width: 768px) {
+//   .menu {
+//     flex-direction: row;
+//     position: relative;
+//   }
+// }
