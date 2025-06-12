@@ -60,9 +60,15 @@ const itemVariants = {
   },
 };
 
-const MobileNav = ({ open, setOpen }) => {
+const MobileNav = ({
+  open,
+  setOpen,
+}: {
+  open: boolean;
+  setOpen: (open: boolean) => void;
+}) => {
   const handleOption = (item: string) => {
-    setOpen(false);
+    setOpen(!open);
     document.getElementById(item)?.scrollIntoView({
       behavior: "smooth",
     });

@@ -8,16 +8,16 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { FaInstagram } from "react-icons/fa";
 
-const variants = {
-  initial: {
-    // opacity: 0,
-    y: -200,
-  },
-  animate: {
-    // opacity: 1,
-    y: 0,
-  },
-};
+// const variants = {
+//   initial: {
+//     // opacity: 0,
+//     y: -200,
+//   },
+//   animate: {
+//     // opacity: 1,
+//     y: 0,
+//   },
+// };
 
 const Gallery = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth >= 768);

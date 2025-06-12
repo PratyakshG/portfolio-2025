@@ -1,6 +1,4 @@
 import Link from "next/link";
-import React from "react";
-import { projects } from "../constants";
 import { GrLinkNext } from "react-icons/gr";
 
 interface ButtonProps {

@@ -1,6 +1,7 @@
 "use client";
 import { motion, easeIn } from "motion/react";
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const dateVariants = {
   initial: {
     opacity: 0,
@@ -17,7 +18,7 @@ const dateVariants = {
   },
 };
 
-var date = new Date();
+// var date = new Date();
 
 const ScrollText = () => {
   return (

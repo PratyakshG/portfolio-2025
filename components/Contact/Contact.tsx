@@ -1,11 +1,10 @@
 "use client";
 
-import { motion, easeIn } from "motion/react";
-import "./contact.scss";
-import { IoLocationSharp } from "react-icons/io5";
+import { easeIn, motion } from "motion/react";
+import { FaGithub } from "react-icons/fa6";
 import { IoIosMail } from "react-icons/io";
 import { RevealLinks } from "../revealLinks";
-import { FaGithub } from "react-icons/fa6";
+import "./contact.scss";
 
 const contactVariants = {
   initial: {

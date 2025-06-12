@@ -1,11 +1,11 @@
 "use client";
 
+import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
-import "./navbar.scss";
-import { motion, easeIn, AnimatePresence, delay } from "motion/react";
-import { Option } from "./Options";
 import { navOptions } from "../../constants";
 import MobileNav from "./MobileNav";
+import "./navbar.scss";
+import { Option } from "./Options";
 
 const navVariants = {
   initial: {
@@ -56,7 +56,7 @@ const Navbar = () => {
       animate={navVariants.animate}
       className={`navbar w-screen lg:w-1/2 lg:rounded-b-3xl flex h-[8vh] px-6 md:px-0 items-center justify-end md:items-center md:justify-between fixed top-0 text-dark-3 md:bg-[#0a0a0a]`}
     >
-      <motion.ul className="h-full w-screen md:px-10 xl:px-20 hidden md:flex items-end justify-end md:items-center md:justify-around text-light">
+      <motion.ul className="h-full w-screen md:px-10 xl:px-20 invisible md:visible flex items-end justify-end md:items-center md:justify-around text-light">
         {navOptions.map((item, index) => (
           <motion.li
             custom={index}

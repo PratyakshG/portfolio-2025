@@ -31,7 +31,7 @@ export const Option = ({
 }) => {
   return (
     <motion.li
-      variants={itemVariants}
+      variants={variants ? variants : itemVariants}
       onClick={onClick}
       className={`cursor-pointer ${className}`}
     >
