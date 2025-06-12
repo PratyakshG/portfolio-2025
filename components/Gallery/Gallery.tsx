@@ -20,7 +20,10 @@ import { FaInstagram } from "react-icons/fa";
 // };
 
 const Gallery = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth >= 768);
+  const hasWindow = typeof window !== "undefined";
+  const [windowWidth, setWindowWidth] = useState(
+    hasWindow ? window.innerWidth : 1024,
+  );
   const targetRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -28,7 +31,7 @@ const Gallery = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setWindowWidth(window.innerWidth >= 768);
+      setWindowWidth(window.innerWidth);
     };
 
     window.addEventListener("resize", handleResize);
@@ -40,15 +43,15 @@ const Gallery = () => {
     [0, 1],
     [
       "1%",
-      window.innerWidth <= 768
+      windowWidth <= 768
         ? "-65%"
-        : window.innerWidth > 768 && window.innerWidth <= 1024
+        : windowWidth > 768 && windowWidth <= 1024
         ? "-70%"
         : "-60%",
     ],
   );
 
-  const x = windowWidth ? desktopAnim : "0%"; // No transform for mobile view
+  const x = windowWidth >= 768 ? desktopAnim : "0%"; // No transform for mobile view
 
   return (
     <section id="gallery">
