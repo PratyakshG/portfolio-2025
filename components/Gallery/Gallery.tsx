@@ -1,6 +1,6 @@
 "use client";
 
-import "./works.scss";
+// import "./works.scss";
 import { motion, useScroll, useTransform } from "motion/react";
 import HorizontalScrollCarousel from "./carouselLayout";
 import { carouselImages } from "../../constants";

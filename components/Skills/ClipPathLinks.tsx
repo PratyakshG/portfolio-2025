@@ -189,10 +189,10 @@ const LinkBox = ({ Icon, text }: { Icon: IconType; text: string }) => {
         style={{
           clipPath: BOTTOM_RIGHT_CLIP,
         }}
-        className="absolute inset-0 grid place-content-center bg-black text-red-600"
+        className="absolute inset-0 grid place-content-center bg-neutral-900 text-red-500"
       >
         <Icon className="text-xl md:text-3xl lg:text-4xl" />
-        <div className="absolute font-poppins text-xs lg:text-lg font-medium bottom-2 left-1/2 -translate-x-1/2">
+        <div className="absolute font-poppins text-xs lg:text-lg bottom-2 left-1/2 -translate-x-1/2">
           {text}
         </div>
       </div>

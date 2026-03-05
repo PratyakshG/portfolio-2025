@@ -106,7 +106,7 @@ export const HoverImageLinks = ({
       >
         <div>
           <div className="flex items-baseline gap-2 xl:gap-3">
-            <span className="relative z-10 block text-[8vw] md:text-[4.5vw] xl:text-5xl font-medium text-neutral-700 transition-colors duration-500 group-hover:text-red-600 font-anton uppercase leading-none">
+            <span className="relative z-10 block text-[8vw] md:text-[4.5vw] xl:text-5xl font-medium text-neutral-700 transition-colors duration-500 group-hover:text-red-500 font-anton uppercase leading-none">
               {index}.
             </span>
             <motion.span
@@ -119,7 +119,7 @@ export const HoverImageLinks = ({
                 staggerChildren: 0.075,
                 delayChildren: 0.25,
               }}
-              className="relative z-10 block text-[10vw] md:text-[6vw] xl:text-[4.5vw] font-medium text-neutral-700 transition-colors duration-500 group-hover:text-red-600 font-anton uppercase leading-none"
+              className="relative z-10 block text-[10vw] md:text-[6vw] xl:text-[4.5vw] font-medium text-neutral-700 transition-colors duration-500 group-hover:text-red-500 font-anton uppercase leading-none"
             >
               {heading.split("").map((l, i) => (
                 <motion.span

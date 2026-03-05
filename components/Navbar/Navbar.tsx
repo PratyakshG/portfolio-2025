@@ -54,7 +54,7 @@ const Navbar = () => {
       variants={navVariants}
       initial={navVariants.initial}
       animate={navVariants.animate}
-      className={`navbar w-screen lg:w-1/2 lg:rounded-b-3xl flex h-[8vh] px-6 md:px-0 items-center justify-end md:items-center md:justify-between fixed top-0 text-dark-3 md:bg-[#0a0a0a]`}
+      className={`navbar w-screen lg:w-1/2 lg:rounded-b-4xl flex h-[8vh] px-6 md:px-0 items-center justify-end md:items-center md:justify-between fixed top-0 text-dark-3 md:bg-[#0a0a0a]`}
     >
       <motion.ul className="h-full w-screen md:px-10 xl:px-20 invisible md:visible flex items-end justify-end md:items-center md:justify-around text-light">
         {navOptions.map((item, index) => (

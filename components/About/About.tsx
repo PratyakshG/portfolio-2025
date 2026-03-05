@@ -29,7 +29,7 @@ const variants = {
 const About = () => {
   return (
     <section id="about">
-      <div className="min-h-screen md:h-screen w-screen flex flex-col md:flex-row items-center justify-center relative m-auto px-6 md:px-10 xl:px-20 py-[6vh] xl:py-[10vh] gap-3">
+      <div className="md:h-screen w-screen flex flex-col md:flex-row items-center justify-center relative m-auto px-6 md:px-10 xl:px-20 py-[6vh] xl:py-[10vh] gap-3">
         {/* left section */}
         <motion.div
           variants={variants}
@@ -69,7 +69,7 @@ const About = () => {
             viewport={{
               once: true,
             }}
-            className="w-full h-full flex items-center justify-center text-center bg-blackolive text-white p-2 xl:p-0 rounded-xl"
+            className="w-full h-full flex items-center justify-center text-center bg-blackolive text-white max-sm:px-2 max-sm:py-5 xl:p-0 rounded-xl"
           >
             <span className="font-delaGothic text-[5dvw] md:text-[4.5dvw] lg:text-[5vw] font-bold leading-none tracking-wider">
               ABOUT ME :)

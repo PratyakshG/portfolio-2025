@@ -7,7 +7,7 @@ import linkImage from "../../public/images/Sarvarath.png";
 const Projects = () => {
   return (
     <section id="projects">
-      <div className="projects h-screen relative w-screen flex flex-col items-center justify-between px-6 md:px-10 xl:px-20 py-[6vh] xl:py-[10vh]">
+      <div className="projects md:h-screen relative w-screen flex flex-col items-center justify-between px-6 md:px-10 xl:px-20 py-[6vh] xl:py-[10vh]">
         {projects.map(({ id, title, desc, figLink, imgSrc }, index) => {
           return (
             <HoverImageLinks
