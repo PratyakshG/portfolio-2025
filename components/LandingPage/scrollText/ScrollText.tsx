@@ -22,12 +22,12 @@ const dateVariants = {
 
 const ScrollText = () => {
   return (
-    <div className="flex w-full items-center justify-center uppercase py-2 md:py-5 px-3 md:px-5 xl:px-10 bg-dark-2 rounded-3xl">
-      <motion.div className="flex w-full flex-col text-[4.5dvw] md:text-[3dvw] whitespace-nowrap">
+    <div className="flex w-full items-center justify-center uppercase py-2 md:py-5 px-3 md:px-5 xl:px-10 bg-dark-2 rounded-xl">
+      <motion.div className="flex w-full flex-col text-[4.5dvw] md:text-[3.8dvw] whitespace-nowrap">
         {list.map((item, index) => (
           <motion.ul
             key={index}
-            className="odd:text-red-500 text-light text-right"
+            className="even:text-red-500 text-light text-right"
             // initial={{
             //   opacity: 0,
             //   y: 100,
@@ -62,7 +62,7 @@ const ScrollText = () => {
               viewport={{
                 once: true,
               }}
-              className="py-2 md:py-2 font-delaGothic font-bold tracking-wider leading-none"
+              className="py-1 md:py-2 font-anton font-black tracking-wider leading-none"
             >
               {item}
             </motion.li>
@@ -75,4 +75,4 @@ const ScrollText = () => {
 
 export default ScrollText;
 
-const list = ["Frontend Developer", "UI/UX Designer", "Photographer", "Artist"];
+const list = ["Full-Stack Developer", "UI/UX Designer", "Photographer", "Artist"];

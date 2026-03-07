@@ -41,12 +41,10 @@ const About = () => {
           className="w-full lg:w-2/5 h-full flex flex-col justify-between gap-3"
         >
           <div className="flex flex-col text-justify text-xs lg:text-sm xl:text-base tracking-tight bg-light font-spaceMono p-5 text-dark-1 gap-3 rounded-xl">
-            <span className="">
+            <span>
               Yo✋ I am a 2024 graduate with a{" "}
-              <span className="font-bold">
-                Bachelor's degree in Computer Science and Engineering
-              </span>
-              . As a Full Stack Developer, I thrive on transforming visually
+              <b className="italic">Bachelor's degree in Computer Science and Engineering</b>. As a{" "}
+              <b className="italic">Full Stack Developer</b>, I thrive on transforming visually
               appealing and creative ideas into reality, and I enjoy developing
               websites that help people accomplish their tasks efficiently.
             </span>
@@ -86,7 +84,7 @@ const About = () => {
             viewport={{
               once: true,
             }}
-            className="w-full h-full flex items-center justify-center bg-dark-2 rounded-xl"
+            className="w-full h-full flex items-center justify-center rounded-xl"
           >
             <ScrollText />
           </motion.div>
