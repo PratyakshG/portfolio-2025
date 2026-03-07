@@ -21,9 +21,9 @@ const LandingPage = () => {
           opacity: 1,
           y: "0%",
         }}
-        className="h-full w-screen place-items-center px-4 md:px-10 pt-[10dvh] gap-5 bg-light text-dark-2 rounded-b-4xl"
+        className="h-full w-screen place-items-center px-4 md:px-10 pt-[15dvh] gap-5 bg-light text-dark-2 rounded-b-4xl max-md:overflow-hidden"
       >
-        <div className="flex items-center gap-10">
+        <div className="flex lg:items-center lg:gap-10">
           <div>
             <motion.span
               initial={{
@@ -73,10 +73,10 @@ const LandingPage = () => {
                   easeIn,
                 },
               }}
-              className="text-3xl font-mono flex items-center justify-between"
+              className="text-xl lg:text-3xl font-mono flex flex-col lg:flex-row lg:items-center justify-between mt-3"
             >
               Software Engineer
-              <span className="flex items-center text-lg">
+              <span className="flex items-center text-base lg:text-lg">
                 <IoLocationSharp size={20} />
                 India
               </span>
@@ -100,7 +100,7 @@ const LandingPage = () => {
             alt="background-image"
             width={400}
             height={500}
-            className="object-cover"
+            className="object-cover max-lg:w-[300px] max-lg:h-[375px]"
             loading="eager"
           />
         </div>
